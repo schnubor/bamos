@@ -1,0 +1,11 @@
+.btn-primary {
+    background-color: transparent;
+    border-color: white;
+    transition: .2s all;
+
+    &:hover{
+        background-color: white;
+        border-color: white;
+        color: black;
+    }
+}
