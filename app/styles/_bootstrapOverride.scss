@@ -1,11 +1,23 @@
-.btn-primary {
+.btn {
     background-color: transparent;
     border-color: white;
     transition: .2s all;
+    border-radius: 6px;
+    border-width: 2px;
+    font-weight: 200;
+    letter-spacing: 2px;
 
-    &:hover{
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus:active {
         background-color: white;
         border-color: white;
         color: black;
     }
+}
+
+.form-control:focus {
+    border-color: #ccc;
+    box-shadow: none;
 }

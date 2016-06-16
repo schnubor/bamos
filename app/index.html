@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Melk | Graffiti Kunst Berlin</title>
+  <title>Bamos | Graffiti Kunst Berlin</title>
 
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -31,11 +31,11 @@
     <![endif]-->
 
   <header>
-    <div class="vmiddle">
+    <div class="vmiddle" onClick="toggleOverlay()">
       <div class="circle one rotating"></div>
       <div class="circle two rotatingCCW"></div>
       <div class="circle three"></div>
-      <img src="/images/spray_logo.svg" class="logo-icon" alt="spray logo">
+      <img src="images/spray_logo.svg" class="logo-icon" alt="spray logo">
       <div class="logo">
         <h1>Bamos</h1>
         <h2>Graffiti Berlin</h2>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="arrow updown">
-      <i class="fa fa-chevron-down"></i>
+      <a href="#walls" class="smooth"><i class="fa fa-chevron-down"></i></a>
     </div>
   </header>
 
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="col-md-12 text-center cta">
-          <a href="#" class="btn btn-lg btn-primary"><i class="fa fa-fw fa-paper-plane"></i> Get in touch</a>
+          <a href="#contact" class="btn btn-lg btn-primary smooth"><i class="fa fa-fw fa-paper-plane"></i> Get in touch</a>
       </div>
     </div>
   </section>
@@ -147,20 +147,25 @@
     <div class="container">
       <div class="col-md-6 col-md-offset-3">
           <h2 class="headline text-center">Get in touch</h2>
-          <form>
+          <div class="jsThanks">
+              <p class="h1">Thank you!</p>
+              <p class="">We will get back to you shortly.</p>
+              <p class="lead text-center"><i class="fa fa-heart-o"></i></p>
+          </div>
+          <form class="jsForm">
             <div class="form-group">
-              <input type="text" class="form-control" id="exampleInputName2" placeholder="Your Email">
+              <input type="text" class="form-control" id="form_email" placeholder="Your Email">
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="message" rows="8" cols="40" placeholder="Your message"></textarea>
+              <textarea class="form-control" name="message" rows="8" cols="40" placeholder="Your message" id="form_msg"></textarea>
             </div>
-            <button type="submit" class="btn btn-lg btn-primary">Send Message</button>
+            <button type="button" class="btn btn-lg btn-primary" onClick="sendMail()"><i class="fa fa-fw fa-paper-plane"></i> Send Message</button>
           </form>
       </div>
     </div>
   </section>
 
-  <section class="footer content">
+  <section class="footer content dark">
     <div class="container">
       <nav class="nav nav-inline pull-left">
         <a href=""><i class="fa fa-fw fa-facebook"></i> Facebook</a>
@@ -171,6 +176,15 @@
       </span>
     </div>
   </section>
+
+  <div class="overlay" onClick="toggleOverlay()">
+      <div class="close">&times;</div>
+      <video id="jsVideo" controls>
+        <source src="images/bamos.mp4" type="video/mp4">
+        <source src="videos/bamos.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+  </div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
@@ -193,6 +207,7 @@
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
