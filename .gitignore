@@ -2,7 +2,7 @@ node_modules
 dist
 .tmp
 .sass-cache
-images/*.mp4
-images/*.ogv
+app/images/*.mp4
+app/images/*.ogv
 bower_components
 test/bower_components
